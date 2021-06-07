@@ -1,6 +1,5 @@
 package cinemaproject.entities;
 
-import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
@@ -17,7 +16,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor @ToString
-public class Projection implements Serializable {
+public class Projection  {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Date dateProjection;

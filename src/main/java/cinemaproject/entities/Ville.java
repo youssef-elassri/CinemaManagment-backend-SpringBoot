@@ -1,6 +1,5 @@
 package cinemaproject.entities;
 
-import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Column;
@@ -16,7 +15,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor @ToString
-public class Ville implements Serializable {
+public class Ville  {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(length = 35)

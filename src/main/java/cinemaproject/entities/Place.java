@@ -1,6 +1,5 @@
 package cinemaproject.entities;
 
-import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Column;
@@ -18,10 +17,9 @@ import lombok.ToString;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor @ToString
-public class Place implements Serializable {
+public class Place  {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(unique = true)
 	private int numero;
 	private double longitude, latitude, altitude;
 	@ManyToOne

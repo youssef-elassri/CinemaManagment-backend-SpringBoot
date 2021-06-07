@@ -1,7 +1,5 @@
 package cinemaproject.entities;
 
-import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,17 +15,18 @@ import lombok.ToString;
 
 @Entity
 @Data @AllArgsConstructor @NoArgsConstructor @ToString
-public class Ticket implements Serializable {
+public class Ticket  {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(length = 70)
 	private String nomClient;
 	private double prix;
-	private int codePayment;
+	@Column(unique = true, nullable = true)
+	private Integer codePayment;
 	private boolean reserver;
 	@ManyToOne()
 	private Place place;
-	
+	@ManyToOne
 	private Projection projection;
 	
 }
