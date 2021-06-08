@@ -8,4 +8,5 @@ import cinemaproject.entities.Cinema;
 @RepositoryRestResource
 public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
+    void deleteCinemaByIdAndVilleId(Long id, Long villeId);
 }
